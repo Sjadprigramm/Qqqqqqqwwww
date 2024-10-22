@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي الأسطوري</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Material+Icons&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            direction: rtl;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(10, 10, 10, 0.9);
+            padding: 20px 0;
+            z-index: 999;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #00ff7f;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #00ff7f;
+            animation: flicker 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #d3d3d3;
+        }
+
+        .neon-button {
+            font-size: 1.2em;
+            padding: 15px 30px;
+            margin-top: 50px;
+            color: #00ff7f;
+            border: 2px solid #00ff7f;
+            border-radius: 50px;
+            text-transform: uppercase;
+            cursor: pointer;
+            background-color: transparent;
+            position: relative;
+            z-index: 1;
+            transition: 0.5s ease;
+            font-weight: 500;
+        }
+
+        .neon-button:hover {
+            background-color: #00ff7f;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px #00ff7f, 0 0 30px #00ff7f, 0 0 40px #00ff7f;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .project {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 127, 0.5);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 255, 127, 0.8);
+        }
+
+        footer {
+            background-color: rgba(10, 10, 10, 0.9);
+            padding: 20px;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .contact-info {
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            color: #d3d3d3;
+        }
+
+        .glow-circle {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0,255,127,0.2), transparent);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            box-shadow: 0 0 60px rgba(0, 255, 127, 0.8), 0 0 100px rgba(0, 255, 127, 0.4);
+            z-index: 0;
+            animation: pulse 3s infinite alternate;
+        }
+
+        .neon-light {
+            color: #00ff7f;
+            text-shadow: 0 0 5px rgba(0, 255, 127, 0.7), 0 0 10px rgba(0, 255, 127, 0.7), 0 0 20px rgba(0, 255, 127, 0.8), 0 0 30px rgba(0, 255, 127, 1);
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            100% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        .material-icons {
+            font-size: 1.5em;
+            vertical-align: middle;
+            color: #00ff7f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about"><span class="material-icons">person</span> من أنا</a>
+        <a href="#projects"><span class="material-icons">work</span> المشاريع</a>
+        <a href="#contact"><span class="material-icons">email</span> اتصل بي</a>
+    </nav>
+
+    <section id="hero">
+        <h1 class="neon-light">مرحباً بيك بموقعي الأسطوري</h1>
+        <a href="#projects" class="neon-button">شوف مشاريعي</a>
+        <div class="glow-circle"></div>
+    </section>
+
+    <section id="about">
+        <h1 class="neon-light"><span class="material-icons">person</span> من أنا</h1>
+        <p>
+            أهلين، أني سجاد مطور ويب أحب أشتغل على تصميم وبرمجة مواقع عصرية ومميزة. عندي خبرة ب HTML، CSS، JavaScript وأحب أتعلم وأتحدى نفسي كل يوم حتى أقدم أفضل تجربة للمستخدم.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h1 class="neon-light"><span class="material-icons">work</span> المشاريع</h1>
+        <div class="projects">
+            <div class="project">
+                <h2><span class="material-icons">build</span>مشروع الافكار</h2>
+                <p>هذا المشروع يقدر الشخص يعطي افكاره.</p>
+            </div>
+            <div class="project">
+                <h2><span class="material-icons">code</span>الموقع هذا</h2>
+                <p>موقع شخصي حلو وجذاب.</p>
+            </div>
+            <div class="project">
+                <h2><span class="material-icons">api</span>منصة سجاد</h2>
+                <p>منصة دراسية لجميع صفوف الثانوية.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="neon-light"><span class="material-icons">email</span> اتصل بي</h1>
+        <p class="contact-info">
+            تقدر تراسلني عبر البريد الإلكتروني على <strong>sjad@gmail.com</strong>، أو تابعني على <strong>لينكدإن</strong> و <strong>جيت هب</strong>.
+        </p>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة الى سجاد ²⁰²⁴©</p>
+    </footer>
+
+</body>
+</html>
